@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auth.login.LoginView">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/username_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                app:layout_constraintStart_toStartOf="@+id/guideline1"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/username_et"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter username"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/username_tv"
+                app:layout_constraintStart_toStartOf="@+id/guideline1"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"/>
+
+
+            <TextView
+                android:id="@+id/password_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/username_et"
+                app:layout_constraintStart_toStartOf="@+id/guideline1"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"/>
+
+            <EditText
+                android:id="@+id/password_et"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter password"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/password_tv"
+                app:layout_constraintStart_toStartOf="@+id/guideline1"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"/>
+
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/password_et"
+                app:layout_constraintStart_toStartOf="@+id/guideline1"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                android:text="Login"/>
+
+            <TextView
+                android:id="@+id/go_to_signup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="New User?  Signup"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="@+id/guideline1"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/login_button"
+                android:gravity="center_horizontal"
+                />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.10"/>
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.90"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
